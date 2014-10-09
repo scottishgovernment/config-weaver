@@ -1,0 +1,25 @@
+default:
+  description: 'The default task for grunt'
+  tasks:
+    - 'express'
+
+test:
+  description: 'Run tests with instrument, generate coverage report'
+  tasks:
+    - 'clean:coverage'
+    - 'instrument'
+    - 'jasmine_node'
+    - 'storeCoverage'
+    - 'makeReport'
+
+sonar:
+  description: 'Run sonar for development'
+  tasks:
+    - 'sonarRunner:preview'
+    - inspect
+
+sonar-ci:
+  description: 'Run sonar for ci'
+  tasks:
+    - 'sonarRunner:analysis'
+

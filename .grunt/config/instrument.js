@@ -1,0 +1,7 @@
+module.exports = {
+    files:['src/*.js'],
+    options: {
+        lazy: true,
+        basePath: 'test/coverage/instrument/'
+    }
+}
