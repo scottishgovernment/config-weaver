@@ -5,11 +5,11 @@ A simple module to support overriding config files using environment variables.
 ## Getting Started
 Install this grunt plugin next to your project's Gruntfile.js with: 
 
-> npm install mygovscot-config
+> npm install config-weaver --save-dev
 
 Then add this line to your project's Gruntfile.js gruntfile:
 
-> grunt.loadNpmTasks('mygovscot-config');
+> grunt.loadNpmTasks('config-weaver');
 
 ## Documentation
 
