@@ -30,7 +30,7 @@ database:
 
 * The following code allows you to access the effective config:
 ```
-var conf = require('mygovscot-config').config();
+var conf = require('config-weaver').config();
 ```
 * This grunt task will log what the effective config would be if the application is run:
 ```
