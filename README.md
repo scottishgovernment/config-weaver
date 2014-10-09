@@ -1,4 +1,4 @@
-# Mygovscot Config
+# Config Weaver
 
 A simple module to support overriding config files using environment variables.
 
