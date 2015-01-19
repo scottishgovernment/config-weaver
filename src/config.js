@@ -7,11 +7,12 @@ module.exports = {
             if (key.indexOf(prefix) === 0) {
                 var val = env[key];
 
-                // strip off the prexif and then tokenize by '_'
-                key = key.substring(prefix.length+1);// +1 for the _
+                // Strip off the prefix and then tokenize by '_'.
+                // Add 1 to prefix length for the '_' character.
+                key = key.substring(prefix.length + 1);
 
                 var parts = key.split('_');
-        
+
                 // set the value
                 var place = config;
 
@@ -36,15 +37,14 @@ module.exports = {
 
     // get a list of env vars to use to override these slots
     showVars : function (config, prefix) {
-        var path = prefix;
         var that = this;
         Object.keys(config).forEach(function(prop){
             if (config[prop] instanceof Object) {
-                that.showVars(config[prop], prefix+'_'+prop)
+                that.showVars(config[prop], prefix+'_'+prop);
             } else {
                 console.log(prefix+'_'+prop+'='+config[prop]);
             }
-        }); 
+        });
     },
 
     // get the config for the module.  This is the result of applying all environment
