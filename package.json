@@ -1,6 +1,6 @@
 {
   "name": "config-weaver",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Simple configuration mechanism allowing infrastructure engineeers to override values via environment variables",
   "main": "./src/config.js",
   "scripts": {
