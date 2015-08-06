@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             var fs = require('fs');
             var yaml = require('js-yaml').dump(conf);
             fs.writeFileSync('config.yaml', yaml);
-            fs.writeFileSync('config.js', JSON.stringify(conf, null, '\t');
+            fs.writeFileSync('config.js', JSON.stringify(conf, null, '\t'));
         }
     );
 
