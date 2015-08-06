@@ -7,6 +7,11 @@ module.exports = {
             if (key.indexOf(prefix) === 0) {
                 var val = env[key];
 
+                // convert 'true' and 'false' strings to boolean values
+                if (val === 'true' || val === 'false') {
+                    val = val === 'true';
+                }
+
                 // Strip off the prefix and then tokenize by '_'.
                 // Add 1 to prefix length for the '_' character.
                 key = key.substring(prefix.length + 1);

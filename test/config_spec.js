@@ -30,17 +30,23 @@ describe('config', function() {
 			// ARRANGE
 			var conf = {
 				mongoConnectionString : 'mongoConnectionString',
-				sqlConnectionString : 'sqlConnectionString'
+				sqlConnectionString : 'sqlConnectionString',
+				featureFlag1 : true,
+				featureFlag2 : false
 			};
 
 			var env = {
 				test_mongoConnectionString : 'mongoConnectionStringChanged',
-				test_sqlConnectionString : 'sqlConnectionStringChanged'
+				test_sqlConnectionString : 'sqlConnectionStringChanged',
+				test_featureFlag1 : 'false',
+				test_featureFlag2 : 'true',
 			};
 
 			var expectedConf = {
 				mongoConnectionString : 'mongoConnectionStringChanged',
-				sqlConnectionString : 'sqlConnectionStringChanged'
+				sqlConnectionString : 'sqlConnectionStringChanged',
+				featureFlag1 : false,
+				featureFlag2 : true
 			};
 
 			// ACT
