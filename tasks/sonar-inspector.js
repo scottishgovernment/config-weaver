@@ -25,8 +25,20 @@ module.exports = function(grunt) {
                 // quality gate check -> i.e We can throw an error to break build
                 console.log('\nSONAR VIOLATIONS: ');
                 reports.issues.forEach(function(issue) {
-                    console.log(issue.severity['magenta'], ' ', issue.message['yellow']);
-                    console.log(issue.component, ':', ' line:' ['cyan'].bold, issue.line);
+                    switch (issue.severity) {
+                        case 'MAJOR':
+                            console.log(issue.severity['red'].bold, ' ', issue.message['white'].bold);
+                            console.log(issue.component['red'], ' line:' ['cyan'], issue.line);
+                            break;
+                        case 'MINOR':
+                            console.log(issue.severity['yellow'].bold, ' ', issue.message['white'].bold);
+                            console.log(issue.component['yellow'], ' line:' ['cyan'], issue.line);
+                            break;
+                        default:
+                            console.log(issue.severity['white'], ' ', issue.message['white']);
+                            console.log(issue.component['grey'], ' line:' ['cyan'], issue.line);
+                            break;
+                    }
                 });
             } else {
                 console.log('\nNo Sonar violations found');
