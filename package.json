@@ -4,7 +4,7 @@
   "description": "Simple configuration mechanism allowing infrastructure engineeers to override values via environment variables",
   "main": "./src/config.js",
   "scripts": {
-    "test": "nyc jasmine-node test"
+    "test": "nyc jasmine"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "infrastructure"
   ],
   "devDependencies": {
-    "jasmine-node": "^1.16.0",
+    "jasmine": "^5.1.0",
     "nyc": "^15.1.0"
   }
 }
