@@ -3,13 +3,11 @@
 A simple module to support overriding config files using environment variables.
 
 ## Getting Started
-Install this grunt plugin next to your project's Gruntfile.js with: 
 
-> npm install config-weaver --save-dev
+Install this package as follows:
 
-Then add this line to your project's Gruntfile.js gruntfile:
+> npm install --save config-weaver
 
-> grunt.loadNpmTasks('config-weaver');
 
 ## Documentation
 
@@ -31,8 +29,4 @@ database:
 * The following code allows you to access the effective config:
 ```
 var conf = require('config-weaver').config();
-```
-* This grunt task will log what the effective config would be if the application is run:
-```
-grunt show-effective-config
 ```

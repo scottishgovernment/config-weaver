@@ -1,0 +1,11 @@
+{
+  "tempDir": "out/nyc",
+  "reportDir": "out/coverage",
+  "reporter": [
+    "lcov",
+    "text",
+    "text-summary"
+  ],
+  "include": "src/*.js",
+  "all": true
+}

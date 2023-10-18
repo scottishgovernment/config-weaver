@@ -4,29 +4,18 @@
   "description": "Simple configuration mechanism allowing infrastructure engineeers to override values via environment variables",
   "main": "./src/config.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "nyc jasmine-node test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidsinclair/config-weaver.git"
+    "url": "https://github.com/scottishgovernment/config-weaver.git"
   },
   "author": "David Sinclair",
   "license": "MIT",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-jasmine": "^0.6.5",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-istanbul": "^0.3.0",
-    "grunt-jasmine-node": "^0.2.1",
-    "grunt-sonar-runner": "^2.3.1",
-    "load-grunt-config": "^0.13.1",
-    "load-grunt-tasks": "^0.6.0"
-  },
   "bugs": {
-    "url": "https://github.com/davidsinclair/config-weaver/issues"
+    "url": "https://github.com/scottishgovernment/config-weaver/issues"
   },
-  "homepage": "https://github.com/davidsinclair/config-weaver",
+  "homepage": "https://github.com/scottishgovernment/config-weaver",
   "directories": {
     "test": "test"
   },
@@ -37,5 +26,9 @@
   "keywords": [
     "config",
     "infrastructure"
-  ]
+  ],
+  "devDependencies": {
+    "jasmine-node": "^1.16.0",
+    "nyc": "^15.1.0"
+  }
 }

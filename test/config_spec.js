@@ -1,4 +1,4 @@
-var config = require('../test/coverage/instrument/src/config.js');
+var config = require('../src/config.js');
 
 describe('config', function() {
 
