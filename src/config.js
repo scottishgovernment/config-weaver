@@ -65,7 +65,7 @@ module.exports = {
         }
 
         // parse the YAML
-        var conf = yaml.safeLoad(fs.readFileSync(configFile, 'utf-8'));
+        var conf = yaml.load(fs.readFileSync(configFile, 'utf-8'));
 
         // each project should have an application.name property
         var appName = conf.application.name;

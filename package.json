@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "fs": "^0.0.2",
-    "js-yaml": "^3.2.2"
+    "js-yaml": "^4.1.0"
   },
   "keywords": [
     "config",
